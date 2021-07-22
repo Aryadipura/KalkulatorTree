@@ -1,5 +1,5 @@
 /** Nama File : bintree.h
- *  Deskripsi : File header ADT Tree
+ *  Deskripsi : File header ADT Binary Tree
  *  Oleh      : Lamda Richo Vanjaya Sumaryadi
  *  Tanggal   : 21 Juli 2021
  */
@@ -43,13 +43,13 @@ BinTree LeftChild(BinTree P);
 /* Mengembalikan anak kanan dari sebuah ekspresi tree */
 BinTree RightChild(BinTree P);
 
-/* Membuat sebuah ekspresi Node Tree baru tetapi belum ada ikatan(tali) dalam tree */
-void CreateNode(BinTree *P, infotypeTree X);
+/* Membuat sebuah ekspresi Node Tree baru tetapi belum ada anak */
+void CreateNodeTree(BinTree *P, infotypeTree X);
 
-/* Membuat agar sebuah tree terdefinisi (punya ikatan) */
+/* Membuat agar sebuah tree punya anak */
 void CreateTree(infotypeTree X, BinTree L, BinTree R, BinTree *P);
 
-/* Memperlihatkan informasi tentang beberapa node dari sebuah ekspresi tree */
+/* Memperlihatkan informasi dari setiap node dari sebuah ekspresi tree */
 void ShowInfoTree(BinTree P);
 
 /* Mengkonversi string menjadi float */
