@@ -62,9 +62,6 @@ boolean isOperator(char c);
 boolean Priority(char x);
 
 /* Mengembalikan true jika operator1 memiliki prioritas yang lebih tinggi daripada operator2 */
-int isPriority(char a, char b);
-
-/* Mengembalikan hasil kalkulasi dari ekspresi sebuah tree */
-float CalculationOfTree(BinTree P); 
+int isPriority(char a, char b); 
 
 #endif
