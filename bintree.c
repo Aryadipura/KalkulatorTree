@@ -6,6 +6,11 @@
 
 #include "bintree.h"
 
+/* Return true jika ekspresi tree kosong dan sebaliknya */
+boolean isEmptyTree(BinTree P){
+  return (P == Nil);
+}
+
 /*Hasil Alokasi Ekspresi Tree menghasilkan address */
 addressTree AlokasiTree(infotypeTree X){
   addressTree P;
@@ -19,19 +24,14 @@ addressTree AlokasiTree(infotypeTree X){
   return P;
 }
 
-/* Return true jika ekspresi tree kosong dan sebaliknya */
-boolean isEmptyTree(BinTree P){
-  return (P == Nil);
-}
-
-/* Mengembalikan anak kiri dari sebuah ekspresi tree */
-BinTree LeftChild(BinTree P){
-  return Left(P);
-}
-
-/* Mengembalikan anak kanan dari sebuah ekspresi tree */
-BinTree RightChild(BinTree P){
-  return Right(P);
+/* Membuat agar sebuah tree punya anak */
+void CreateTree(infotypeTree X, BinTree L, BinTree R, BinTree *P){
+  *P = AlokasiTree(X);
+  if(*P! = Nil){
+    Info(*P) = X;
+    Left(*P) = L;
+    Right(*P) = R;
+  }
 }
 
 /* Membuat sebuah ekspresi Node Tree baru tetapi belum ada anak */
@@ -44,14 +44,14 @@ void CreateNodeTree(BinTree *P, infotypeTree X){
   }
 }
 
-/* Membuat agar sebuah tree punya anak */
-void CreateTree(infotypeTree X, BinTree L, BinTree R, BinTree *P){
-  *P = AlokasiTree(X);
-  if(*P! = Nil){
-    Info(*P) = X;
-    Left(*P) = L;
-    Right(*P) = R;
-  }
+/* Mengembalikan anak kiri dari sebuah ekspresi tree */
+BinTree LeftChild(BinTree P){
+  return Left(P);
+}
+
+/* Mengembalikan anak kanan dari sebuah ekspresi tree */
+BinTree RightChild(BinTree P){
+  return Right(P);
 }
 
 /* Memperlihatkan informasi dari setiap node dari sebuah ekspresi tree */
@@ -83,11 +83,6 @@ float StringToFloat(String X){
   return atof(X);
 }
 
-/* Return true jika karakter yang dicek atau diperiksa merupakan sebuah operator */
-boolean isOperator(char c){
-  return(c=='+' || c=='-' || c=='*' || c=='x' || c=='/' || c ==':' || c =='^');
-}
-
 /* Mengembalikan nilai prioritas dari sebuah operator (semakin besar nilai, prioritas semakin diutamakan) */
 boolean Priority(char x){
   switch(X){
@@ -108,3 +103,8 @@ boolean Priority(char x){
 int isPriority(char a, char b){
   return (Priority(a) >= Priority(b));
 } 
+
+/* Return true jika karakter yang dicek atau diperiksa merupakan sebuah operator */
+boolean isOperator(char c){
+  return(c=='+' || c=='-' || c=='*' || c=='x' || c=='/' || c ==':' || c =='^');
+}

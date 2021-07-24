@@ -31,11 +31,17 @@ typedef struct treeNode {
 		} tTreeNode;
 typedef addressTree BinTree;
 
+/* Return true jika ekspresi tree kosong dan sebaliknya */
+boolean isEmptyTree(BinTree P);
+
 /*Hasil Alokasi Ekspresi Tree menghasilkan address */
 addressTree AlokasiTree(infotypeTree X);
 
-/* Return true jika ekspresi tree kosong dan sebaliknya */
-boolean isEmptyTree(BinTree P);
+/* Membuat agar sebuah tree punya anak */
+void CreateTree(infotypeTree X, BinTree L, BinTree R, BinTree *P);
+
+/* Membuat sebuah ekspresi Node Tree baru tetapi belum ada anak */
+void CreateNodeTree(BinTree *P, infotypeTree X);
 
 /* Mengembalikan anak kiri dari sebuah ekspresi tree */
 BinTree LeftChild(BinTree P);
@@ -43,25 +49,19 @@ BinTree LeftChild(BinTree P);
 /* Mengembalikan anak kanan dari sebuah ekspresi tree */
 BinTree RightChild(BinTree P);
 
-/* Membuat sebuah ekspresi Node Tree baru tetapi belum ada anak */
-void CreateNodeTree(BinTree *P, infotypeTree X);
-
-/* Membuat agar sebuah tree punya anak */
-void CreateTree(infotypeTree X, BinTree L, BinTree R, BinTree *P);
-
 /* Memperlihatkan informasi dari setiap node dari sebuah ekspresi tree */
 void ShowInfoTree(BinTree P);
-
-/* Mengkonversi string menjadi float */
-float StringToFloat(String X);
-
-/* Return true jika karakter yang dicek atau diperiksa merupakan sebuah operator */
-boolean isOperator(char c);
 
 /* Mengembalikan nilai prioritas dari sebuah operator (semakin besar nilai, prioritas semakin diutamakan) */
 boolean Priority(char x);
 
 /* Mengembalikan true jika operator1 memiliki prioritas yang lebih tinggi daripada operator2 */
 int isPriority(char a, char b); 
+
+/* Return true jika karakter yang dicek atau diperiksa merupakan sebuah operator */
+boolean isOperator(char c);
+
+/* Mengkonversi string menjadi float */
+float StringToFloat(String X);
 
 #endif
