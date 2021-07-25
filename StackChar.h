@@ -1,3 +1,9 @@
+/** Nama File : StackChar.h
+ *  Deskripsi : File header ADT StackChar
+ *  Oleh      : Muhamad Aryadipura
+ *  Tanggal   : 24 Juli 2021
+ */
+
 #ifndef STACK_CHAR_H
 #define STACK_CHAR_H
 

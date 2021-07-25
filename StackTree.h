@@ -1,3 +1,10 @@
+/** Nama File : StackTree.h
+ *  Deskripsi : File header ADT StackTree
+ *  Oleh      : Muhamad Aryadipura
+ *  Tanggal   : 24 Juli 2021
+ */
+
+
 #ifndef STACK_TREE_H
 #define STACK_TREE_H
 

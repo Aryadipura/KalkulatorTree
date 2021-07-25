@@ -1,3 +1,10 @@
+/** Nama File : StackTree.c
+ *  Deskripsi : File header ADT StackTree
+ *  Oleh      : Muhamad Aryadipura
+ *  Tanggal   : 24 Juli 2021
+ */
+
+
 #include "StackTree.h"
 
 boolean isEmptyStackTree(StackTree S) {

@@ -1,3 +1,10 @@
+/** Nama File : StackChar.c
+ *  Deskripsi : File body ADT StackChar
+ *  Oleh      : Muhamad Aryadipura
+ *  Tanggal   : 24 Juli 2021
+ */
+
+
 #include "StackChar.h"
 
 
