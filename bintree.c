@@ -7,7 +7,7 @@
 #include "bintree.h"
 
 /* Return true jika ekspresi tree kosong dan sebaliknya */
-boolean isEmptyTree(BinTree P){
+boolean IsEmptyTree(BinTree P){
   return (P == Nil);
 }
 
@@ -99,7 +99,7 @@ int Priority(char x){
 
 
 /* Mengembalikan true jika operator1 memiliki prioritas yang lebih tinggi daripada operator2 */
-int isPriority(char a, char b){
+boolean isPriority(char a, char b){
   return (Priority(a) >= Priority(b));
 } 
 
@@ -107,3 +107,4 @@ int isPriority(char a, char b){
 boolean isOperator(char c){
   return(c=='+' || c=='-' || c=='*' || c=='x' || c=='/' || c ==':' || c =='^');
 }
+

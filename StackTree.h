@@ -9,17 +9,18 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include "bintree.h"
+#include"boolean.h"
 
 
 typedef BinTree infotypeStackTree;
 typedef struct tElmStackTree *addressStackTree;
 typedef struct tElmStackTree{
-infotypeStackTree info;
-addressStackTree next;
+  infotypeStackTree info;
+  addressStackTree next;
 }ElmStackTree;
  
 typedef struct{
-addressStackTree top;
+  addressStackTree top;
 }StackTree;
 
 
