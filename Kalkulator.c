@@ -82,11 +82,11 @@ BinTree BuildExpressionTree(infotypeTree postfix){
 			
 			AddStackTree(&StackTree, ExpressionTree); 
 		}
-		i++;
-		ExpressionTree = Info(Top(StackTree));
-		DellStackTree(&StackTree, &ExpressionTree);
-		return ExpressionTree;				
+		i++;					
 	}
+	ExpressionTree = Info(Top(StackTree));
+	DellStackTree(&StackTree, &ExpressionTree);
+	return ExpressionTree;
 }
 
 /* Mengkonversi ekspresi infix menjadi ekspresi postfix.
@@ -195,10 +195,20 @@ float CalculationOfTree(BinTree P){
 		return left*right;
 	}
 	else if(strcmp(Info(P),"/")==0) {
-		return left/right;
+		if(right != 0.00){
+			return left/right;
+		} else{
+			puts("Tidak bisa dibagi oleh nol");
+			return 0;
+		}
 	}
 	else if(strcmp(Info(P),":")==0) {
-		return left/right;
+		if(right != 0.00){
+			return left/right;
+		} else{
+			puts("Tidak bisa dibagi oleh nol");
+			return 0;
+		}
 	}
 	for(i = 0; i < right; i++) {
 		temp *= left;
