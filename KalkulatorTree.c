@@ -1,11 +1,14 @@
-/** Nama File : Kalkulator.c
+/** Nama File : KalkulatorTree.c
  *  Deskripsi : File Body ADT Kalkulator
  *  Oleh      : Fiora Berliana Putri
  *  Tanggal   : 24 Juli 2021
+ * 
+ *  Modifikasi: Lamda Richo Vanjaya Sumaryadi
+ *  Tanggal   : 25 Juli 2021
  */
 
-#include "Kalkulator.h"
-#include "bintree.h"
+#include "KalkulatorTree.h"
+#include "BinaryTree.h"
 
 /* Membuat sebuah ekspresi tree dari ekspresi postfix yang sudah didapatkan. 
  * I.S. : Postfix terdefinisi.

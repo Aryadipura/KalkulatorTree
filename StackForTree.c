@@ -1,11 +1,14 @@
-/** Nama File : StackTree.c
+/** Nama File : StackForTree.c
  *  Deskripsi : File header ADT StackTree
  *  Oleh      : Muhamad Aryadipura
  *  Tanggal   : 24 Juli 2021
+ * 
+ *  Modifikasi: Lamda Richo Vanjaya Sumaryadi
+ *  Tanggal   : 25 Juli 2021
  */
 
 
-#include "StackTree.h"
+#include "StackForTree.h"
 
 boolean isEmptyStackTree(StackTree S) {
 /* Mengembalikan true jika Stack Char kosong */

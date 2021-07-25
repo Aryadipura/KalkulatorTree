@@ -1,10 +1,10 @@
-/** Nama File : bintree.c
+/** Nama File : BinaryTree.c
  *  Deskripsi : File Body Binary Tree
  *  Oleh      : Lamda Richo Vanjaya Sumaryadi
  *  Tanggal   : 21 Juli 2021
  */
 
-#include "bintree.h"
+#include "BinaryTree.h"
 
 /* Return true jika ekspresi tree kosong dan sebaliknya */
 boolean IsEmptyTree(BinTree P){

@@ -1,7 +1,10 @@
-/** Nama File : StackTree.h
+/** Nama File : StackForTree.h
  *  Deskripsi : File header ADT StackTree
  *  Oleh      : Muhamad Aryadipura
  *  Tanggal   : 24 Juli 2021
+ * 
+ *  Modifikasi: Lamda Richo Vanjaya Sumaryadi
+ *  Tanggal   : 25 Juli 2021
  */
 
 
@@ -15,7 +18,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#include "bintree.h"
+#include"BinaryTree.h"
 #include"boolean.h"
 
 

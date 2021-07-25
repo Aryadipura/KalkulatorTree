@@ -1,7 +1,10 @@
-/** Nama File : bintree.h
+/** Nama File : BinaryTree.h
  *  Deskripsi : File header ADT Binary Tree
  *  Oleh      : Lamda Richo Vanjaya Sumaryadi
  *  Tanggal   : 21 Juli 2021
+ * 
+ *  Modifikasi: Fiora Berliana Putri
+ * 	Tanggal   : 25 Juli 2021
  */
 
 #ifndef BINTREE_H
@@ -17,7 +20,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "StackChar.h" 
+#include "StackForChar.h" 
 #include "boolean.h"
 
 typedef char String[50];
