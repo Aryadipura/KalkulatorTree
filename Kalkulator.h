@@ -7,6 +7,12 @@
 #ifndef KALKULATOR_H
 #define KALKULATOR_H
 
+#define Nil NULL
+#define Info(P) (P)->info
+#define Left(P) (P)->left
+#define Right(P) (P)->right
+#define Next(P) (P)->next
+
 #include "StackTree.h"
 #include "bintree.h"
 #include "BangunDatar.h"

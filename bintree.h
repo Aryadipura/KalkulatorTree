@@ -17,7 +17,9 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "StackTree.h"
 #include "StackChar.h" 
+#include "Kalkulator.h"
 #include "boolean.h"
 
 typedef char String[50];

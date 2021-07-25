@@ -12,7 +12,7 @@
 
 
 typedef BinTree infotypeStackTree;
-typedef struct tElmSackTree *addressStackTree;
+typedef struct tElmStackTree *addressStackTree;
 typedef struct tElmStackTree{
 infotypeStackTree info;
 addressStackTree next;

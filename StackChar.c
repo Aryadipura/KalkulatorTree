@@ -1,4 +1,5 @@
 #include "StackChar.h"
+#define Nil NULL
 
 boolean isEmptyStackChar(StackChar S) {
 /* Mengembalikan true jika Stack Char kosong */

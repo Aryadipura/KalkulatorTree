@@ -17,7 +17,7 @@ addressTree AlokasiTree(infotypeTree X){
 
   P = (addressTree)malloc(sizeof(tTreeNode));
   if (P != Nil){
-    Info(P) = X;
+    strcpy(Info(P),X);
     Left(P) = Nil;
     Right(P) = Nil;
   }
@@ -26,23 +26,22 @@ addressTree AlokasiTree(infotypeTree X){
 
 /* Membuat agar sebuah tree punya anak */
 void CreateTree(infotypeTree X, BinTree L, BinTree R, BinTree *P){
-  *P = AlokasiTree(X);
-  if(*P! = Nil){
-    Info(*P) = X;
-    Left(*P) = L;
-    Right(*P) = R;
+  *P=AlokasiTree(X);
+	if(*P!=Nil) {
+		strcpy(Info(*P),X);
+	   	Left(*P)=L;
+		Right(*P)=R;	
   }
 }
 
 /* Membuat sebuah ekspresi Node Tree baru tetapi belum ada anak */
 void CreateNodeTree(BinTree *P, infotypeTree X){
-  *P = AlokasiTree(X);
-  if(*P! = Nil){
-    Info(*P) = X;
-    Left(*P) = Nil;
-    Right(*P) = Nil;
-  }
-}
+ *P=AlokasiTree(X);
+	if(*P!=Nil) {
+		strcpy(Info(*P),X);
+	    Left(*P)=Right(*P)=Nil;
+	} 
+} 
 
 /* Mengembalikan anak kiri dari sebuah ekspresi tree */
 BinTree LeftChild(BinTree P){
@@ -56,7 +55,7 @@ BinTree RightChild(BinTree P){
 
 /* Memperlihatkan informasi dari setiap node dari sebuah ekspresi tree */
 void ShowInfoTree(BinTree P){
-  BinTree L, R, Px;
+  BinTree L, R, x;
   
   if(P != Nil){
     ShowInfoTree(Left(P));
@@ -84,8 +83,8 @@ float StringToFloat(String X){
 }
 
 /* Mengembalikan nilai prioritas dari sebuah operator (semakin besar nilai, prioritas semakin diutamakan) */
-boolean Priority(char x){
-  switch(X){
+int Priority(char x){
+  switch(x){
     case ')' : return 0;
     case '(': return 0;
     case '+': return 1;
@@ -95,9 +94,9 @@ boolean Priority(char x){
     case '/': return 2;
     case ':': return 2;
 		case '^': return 3;    
-    }
   }
 }
+
 
 /* Mengembalikan true jika operator1 memiliki prioritas yang lebih tinggi daripada operator2 */
 int isPriority(char a, char b){
