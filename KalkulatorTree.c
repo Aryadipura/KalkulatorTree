@@ -228,21 +228,21 @@ void MenuKalkulator(){
 	String postfix, input;
 	
 	system("cls");
-	puts("\n\t\t\t Menu Kalkulator \n");
+	puts("\n\t\t\t Aplikasi Kalkulator \n");
 	printf("Petunjuk : ");
 	printf("\n1. Gunakan '^' untuk melakukan operasi perpangkatan.");
 	printf("\n2. Gunakan '*' atau 'x' untuk melakukan operasi perkalian.");
 	printf("\n3. Gunakan ':' atau '/' untuk melakukan operasi pembagian.");
 	printf("\n4. Gunakan '+' untuk melakukan operasi penjumlahan.");
 	printf("\n5. Gunakan '-' untuk melakukan operasi pengurangan.");
-	printf("\n6. Dapat menambahkan '( dan )' ke dalam operasi perhitungan.");
+	printf("\n6. Dapat menambahkan '(' dan ')' ke dalam operasi perhitungan.");
 	printf("\n7. Bilangan yang berlaku adalah bilangan bulat \n");
 	printf("\n\n");
 	system("PAUSE");
 	system("cls");
-	puts("\n\t\t\t Menu Kalkulator \n");
+	puts("\n\t\t\t Aplikasi Kalkulator \n");
 	printf("Lakukan perhitungan :\n\n"); 
-	scanf(" %s", input);
+	scanf("%s", input);
 	InfixToPostfix(input, postfix);
 	printf("\n");
 	expTree = BuildExpressionTree(postfix);
@@ -268,7 +268,7 @@ void MenuBangunDatar(){
 	puts("7. Layang-Layang");
 	puts("8. Lingkaran");
 	
-	puts("\nMasukkan pilihan sesuai nomor : ");
+	printf("\nMasukkan pilihan sesuai nomor : ");
 	scanf("%d", &nomor);
 	switch(nomor) {	
 	    case 1 :
@@ -321,10 +321,6 @@ void About(){
 	printf("\nLamda Richo Vanjaya Sumaryadi - 201524049");
 	printf("\nMuhamad Aryadipura Sasmita Atmadja - 201524054");
 	printf("\nUntuk memenuhi Tugas Besar mata kuliah Struktur Data dan Algoritma.\n");
-	
-//	printf("\n");
-//	system("PAUSE");
-//	system("cls");
 }
 
 /* Menampilkan menu utama aplikasi kalkulator.
@@ -336,13 +332,13 @@ int mainMenu(){
 	int nomor;
 	
 	while(i <= 100) {
-		puts("\n\t\t\t Aplikasi Kalkulator \t\t\t");
-		puts("\nMain Menu ");
-		puts("1. Kalkulator");
-		puts("2. Bangun Datar");
-		puts("3. About");
-		puts("4. Exit");
-		puts("Masukkan pilihan sesuai nomor : ");
+		puts("\n\t\t Aplikasi Kalkulator \t\t");
+		puts("\n Main Menu\n ");
+		puts(" 1. Kalkulator");
+		puts(" 2. Bangun Datar");
+		puts(" 3. About");
+		puts(" 4. Exit");
+		printf(" Masukkan pilihan sesuai nomor : ");
 		scanf("%d", &nomor);
 		switch(nomor) {	
 		    case 1 :

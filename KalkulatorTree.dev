@@ -50,27 +50,7 @@ ProductVersion=
 AutoIncBuildNr=0
 SyncProduct=1
 
-[Unit1]
-FileName=main.c
-CompileCpp=0
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
 [Unit2]
-FileName=boolean.h
-CompileCpp=0
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit3]
 FileName=BangunDatar.c
 CompileCpp=0
 Folder=
@@ -80,7 +60,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit4]
+[Unit3]
 FileName=BangunDatar.h
 CompileCpp=0
 Folder=
@@ -90,8 +70,18 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
+[Unit4]
+FileName=BinaryTree.c
+CompileCpp=0
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
 [Unit5]
-FileName=Kalkulator.c
+FileName=BinaryTree.h
 CompileCpp=0
 Folder=
 Compile=1
@@ -101,7 +91,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit6]
-FileName=Kalkulator.h
+FileName=KalkulatorTree.c
 CompileCpp=0
 Folder=
 Compile=1
@@ -111,7 +101,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit7]
-FileName=bintree.h
+FileName=KalkulatorTree.h
 CompileCpp=0
 Folder=
 Compile=1
@@ -121,7 +111,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit8]
-FileName=bintree.c
+FileName=StackForChar.c
 CompileCpp=0
 Folder=
 Compile=1
@@ -131,7 +121,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit9]
-FileName=StackChar.c
+FileName=StackForChar.h
 CompileCpp=0
 Folder=
 Compile=1
@@ -141,7 +131,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit10]
-FileName=StackChar.h
+FileName=StackForTree.c
 CompileCpp=0
 Folder=
 Compile=1
@@ -151,7 +141,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit11]
-FileName=StackTree.h
+FileName=StackForTree.h
 CompileCpp=0
 Folder=
 Compile=1
@@ -161,7 +151,17 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit12]
-FileName=StackTree.c
+FileName=MainKalkulator.c
+CompileCpp=0
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit1]
+FileName=boolean.h
 CompileCpp=0
 Folder=
 Compile=1
