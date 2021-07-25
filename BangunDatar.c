@@ -173,7 +173,7 @@ void HitungBelahKetupat(){
 /* I.S.   : P terdefinisi.								*/
 /* F.S.   : Hasil perhitungan luas P dikembalikan.		*/
 float LuasLayangLayang(LayangLayang P){
-	return 0.5*(Diagonal1(P)+Diagonal2(P));
+	return 0.5*(Diagonal1(P)*Diagonal2(P));
 }
 
 /* Mengembalikan hasil perhitungan keliling layang-layang.	*/
