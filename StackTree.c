@@ -39,7 +39,7 @@ void dealokasiStackTree(addressStackTree P) {
     free(P);
 }
 
-void AddStackTree(stackTree *S, infotypeStackTree X) {
+void AddStackTree(StackTree *S, infotypeStackTree X) {
 /* Menambahkan X ke bagian Top	*/
 /* I.S   : S terdefinisi tapi kosong							*/
 /* F.S   : X ditambahkan ke Top	*/
@@ -51,7 +51,7 @@ void AddStackTree(stackTree *S, infotypeStackTree X) {
     Top(*S)=P;
 }
 
-void DellStackTree(stackTree *S, infotypeStackTree *X) {
+void DellStackTree(StackTree *S, infotypeStackTree *X) {
 /* Menghapus X dari bagian Top*/
 /* I.S   : Top berisikan X	 */
 /* F.S   : X dihapuskan dari Top */ 

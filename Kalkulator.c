@@ -5,6 +5,7 @@
  */
 
 #include "Kalkulator.h"
+#include "bintree.h"
 
 /* Membuat sebuah ekspresi tree dari ekspresi postfix yang sudah didapatkan. 
  * I.S. : Postfix terdefinisi.
@@ -174,11 +175,11 @@ float CalculationOfTree(BinTree P){
 	}
     else if(IsEmptyTree(Left(P)) && IsEmptyTree(Right(P))) {
     	//konversi dari char ke float
-        return toFloat(Info(P));  
+        return StringToFloat(Info(P));  
     }
   
  	//rekursif inorder 
-    float left = CalculatioOfTree(Left(P));  
+    float left = CalculationOfTree(Left(P));  
     float right = CalculationOfTree(Right(P));  
     
     if(strcmp(Info(P),"+")==0) {
@@ -240,6 +241,8 @@ void MenuKalkulator(){
  * F.S. : Menu untuk bangun datar ditampilkan.
  */
 void MenuBangunDatar(){
+	int nomor;
+
 	system("cls");
 	puts("\n\t\t Bangun Datar ");
 	printf("\nBangun datar yang tersedia :\n");
@@ -253,7 +256,8 @@ void MenuBangunDatar(){
 	puts("8. Lingkaran");
 	
 	puts("\nMasukkan pilihan sesuai nomor : ");
-	switch(getch()) {	
+	scanf("%d", &nomor);
+	switch(nomor) {	
 	    case '1' :
 	    	system("cls");
 	    	HitungPersegi();
@@ -316,6 +320,7 @@ void About(){
  */
 int mainMenu(){
 	int i;
+	int nomor;
 	
 	while(i <= 100) {
 		puts("\n\t\t\t Aplikasi Kalkulator \t\t\t");
@@ -325,7 +330,8 @@ int mainMenu(){
 		puts("3. About");
 		puts("4. Exit");
 		puts("Masukkan pilihan sesuai nomor : ");
-		switch(getch()) {	
+		scanf("%d", &nomor);
+		switch(nomor) {	
 		    case '1' :
 		    	MenuKalkulator();
 				break;

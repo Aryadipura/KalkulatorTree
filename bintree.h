@@ -34,7 +34,7 @@ typedef struct treeNode {
 typedef addressTree BinTree;
 
 /* Return true jika ekspresi tree kosong dan sebaliknya */
-boolean isEmptyTree(BinTree P);
+boolean IsEmptyTree(BinTree P);
 
 /*Hasil Alokasi Ekspresi Tree menghasilkan address */
 addressTree AlokasiTree(infotypeTree X);
@@ -55,10 +55,10 @@ BinTree RightChild(BinTree P);
 void ShowInfoTree(BinTree P);
 
 /* Mengembalikan nilai prioritas dari sebuah operator (semakin besar nilai, prioritas semakin diutamakan) */
-boolean Priority(char x);
+int Priority(char x);
 
 /* Mengembalikan true jika operator1 memiliki prioritas yang lebih tinggi daripada operator2 */
-int isPriority(char a, char b); 
+boolean isPriority(char a, char b); 
 
 /* Return true jika karakter yang dicek atau diperiksa merupakan sebuah operator */
 boolean isOperator(char c);

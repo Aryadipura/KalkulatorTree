@@ -1,5 +1,10 @@
-	#ifndef STACK_CHAR_H
+#ifndef STACK_CHAR_H
 #define STACK_CHAR_H
+
+#define Nil NULL
+#define Info(P) (P)->info
+#define Next(P) (P)->next
+#define Top(S)  ((S).top)
 
 #include<stdio.h>
 #include<stdlib.h>
