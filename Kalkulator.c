@@ -258,35 +258,35 @@ void MenuBangunDatar(){
 	puts("\nMasukkan pilihan sesuai nomor : ");
 	scanf("%d", &nomor);
 	switch(nomor) {	
-	    case '1' :
+	    case 1 :
 	    	system("cls");
 	    	HitungPersegi();
 			break;
-		case '2' :
+		case 2 :
 			system("cls");
 			HitungPersegiPanjang();
 			break;
-		case '3' :
+		case 3 :
 			system("cls"); 
 			HitungSegitiga();
 			break;
-		case '4' :
+		case 4 :
 			system("cls");
 			HitungTrapesium();
 			break;
-		case '5' :
+		case 5 :
 			system("cls");
 			HitungJajarGenjang(); 
 			break;
-		case '6' : 
+		case 6 : 
 			system("cls");
 			HitungBelahKetupat();
 			break;
-		case '7' :
+		case 7 :
 			system("cls");
 			HitungLayangLayang();
 			break;
-		case '8' :
+		case 8 :
 			system("cls"); 
 			HitungLingkaran();
 			break;
@@ -309,9 +309,9 @@ void About(){
 	printf("\nMuhamad Aryadipura Sasmita Atmadja - 201524054");
 	printf("\nUntuk memenuhi Tugas Besar mata kuliah Struktur Data dan Algoritma.\n");
 	
-	printf("\n");
-	system("PAUSE");
-	system("cls");
+//	printf("\n");
+//	system("PAUSE");
+//	system("cls");
 }
 
 /* Menampilkan menu utama aplikasi kalkulator.
@@ -324,7 +324,7 @@ int mainMenu(){
 	
 	while(i <= 100) {
 		puts("\n\t\t\t Aplikasi Kalkulator \t\t\t");
-		puts("\nMain Menu \n");
+		puts("\nMain Menu ");
 		puts("1. Kalkulator");
 		puts("2. Bangun Datar");
 		puts("3. About");
@@ -332,16 +332,16 @@ int mainMenu(){
 		puts("Masukkan pilihan sesuai nomor : ");
 		scanf("%d", &nomor);
 		switch(nomor) {	
-		    case '1' :
+		    case 1 :
 		    	MenuKalkulator();
 				break;
-			case '2' : 
+			case 2 : 
 				MenuBangunDatar();
 				break;
-			case '3' : 
+			case 3 : 
 				About();
 				break;
-			case '4' :
+			case 4 :
 				system("cls");
 				puts("\nTerima Kasih sudah menggunakan aplikasi kami..");
 				return 0;

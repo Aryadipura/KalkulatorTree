@@ -17,9 +17,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "StackTree.h"
 #include "StackChar.h" 
-#include "Kalkulator.h"
 #include "boolean.h"
 
 typedef char String[50];
@@ -30,7 +28,7 @@ typedef struct treeNode {
 			infotypeTree info;
 			addressTree left;
 			addressTree right;
-		} tTreeNode;
+		} treeNode;
 typedef addressTree BinTree;
 
 /* Return true jika ekspresi tree kosong dan sebaliknya */

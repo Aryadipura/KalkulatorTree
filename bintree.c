@@ -15,7 +15,7 @@ boolean IsEmptyTree(BinTree P){
 addressTree AlokasiTree(infotypeTree X){
   addressTree P;
 
-  P = (addressTree)malloc(sizeof(tTreeNode));
+  P = (addressTree)malloc(sizeof(treeNode));
   if (P != Nil){
     strcpy(Info(P),X);
     Left(P) = Nil;
