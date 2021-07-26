@@ -62,7 +62,7 @@ void HitungPersegiPanjang(){
 /* Mengembalikan hasil perhitungan luas segitiga.	*/
 /* I.S. : P terdefinisi.							*/
 /* F.S. : Hasil perhitungan luas P dikembalikan.	*/
-float LuasSegitiga(Segitiga P){
+float LuasSegitiga(Segitiga P){ //asumsi nya segitiga sama sisi
 	return 0.5*Alas(P)*Tinggi(P);
 }
 
@@ -70,7 +70,7 @@ float LuasSegitiga(Segitiga P){
 /* I.S. : P terdefinisi.								*/
 /* F.S. : Hasil perhitungan keliling P dikembalikan.	*/
 float KelilingSegitiga(Segitiga P){
-	return Sisi(P)+Tinggi(P)+Alas(P);
+	return 3*Alas(P);
 }
 
 /* Procedure untuk menginput, dan menghitung luas dan keliling segitiga. 	*/
@@ -81,7 +81,6 @@ void HitungSegitiga(){
 	printf("\n\t\t Hitung Segitiga \n");
 	printf("\nMasukkan Alas\t\t : "); scanf("%d", &Alas(P));
 	printf("Masukkan Tinggi\t\t : "); scanf("%d", &Tinggi(P));
-	printf("Masukkan Sisi Miring\t : "); scanf("%d", &Sisi(P));
 	printf("\nLuas Segitiga\t\t = %.2f", LuasSegitiga(P));
 	printf("\nKeliling Segitiga\t = %.2f\n", KelilingSegitiga(P));
 }
@@ -126,7 +125,7 @@ float LuasJajarGenjang(JajarGenjang P){
 /* I.S.   : P terdefinisi.									*/
 /* F.S.  : Hasil perhitungan keliling P dikembalikan.		*/
 float KelilingJajarGenjang(JajarGenjang P){
-	return 2*(Sisi(P)*Alas(P));
+	return 2*(Sisi(P)+Alas(P));
 }
 
 /* Procedure untuk menginput, dan menghitung luas dan keliling jajar genjang.		*/
@@ -146,7 +145,7 @@ void HitungJajarGenjang(){
 /* I.S.   : P terdefinisi.								*/
 /* F.S.   : Hasil perhitungan luas P dikembalikan.		*/
 float LuasBelahKetupat(BelahKetupat P){
-	return 0.5*(Diagonal1(P)+Diagonal2(P));
+	return 0.5*(Diagonal1(P)*Diagonal2(P)); 
 }
 
 /* Mengembalikan hasil perhitungan keliling belah ketupat.	*/
