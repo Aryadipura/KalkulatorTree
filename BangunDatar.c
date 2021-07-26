@@ -180,7 +180,7 @@ float LuasLayangLayang(LayangLayang P){
 /* I.S.   : P terdefinisi.									*/
 /* F.S.   : Hasil perhitungan keliling P dikembalikan.		*/
 float KelilingLayangLayang(LayangLayang P){
-	return 2*(Sisi1(P)*Sisi2(P));	
+	return 2*(Sisi1(P)+Sisi2(P));	
 }
 
 /* Procedure untuk menginput, dan menghitung luas dan keliling layang-layang.		*/
