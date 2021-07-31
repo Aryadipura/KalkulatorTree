@@ -38,6 +38,7 @@ BinTree BuildExpressionTree(infotypeTree postfix){
 			}
 			AddStackTree(&StackTree, ExpressionTree);
 		}
+		//untuk kasus operasi -
 		else if(postfix[i] == '-' && isOperator(postfix[i-4])) { 
 		tempOperator[0] = postfix[i];
 		CreateNodeTree(&ExpressionTree, tempOperator);
@@ -52,6 +53,7 @@ BinTree BuildExpressionTree(infotypeTree postfix){
 			
 		AddStackTree(&StackTree, ExpressionTree); 
 		} 
+		//untuk kasus operasi -
 		else if((postfix[i]=='-' && postfix[i-1]==' ' && postfix[i+1]!=' ' && postfix[i+2]!=' ' && !isOperator(postfix[i+2])) || 
 				(postfix[i]=='-' && postfix[i-1]!=' ' && postfix[i+1]==' ') || 
 				(postfix[i]=='-' && postfix[i-1]!=' ' && isOperator(postfix[i+1])) ||
@@ -63,8 +65,9 @@ BinTree BuildExpressionTree(infotypeTree postfix){
 		
 			Right = Info(Top(StackTree));
 			DellStackTree(&StackTree, &Delete);
-							 
-			CreateNodeTree(&Left, "0");
+			
+			Left = Info(Top(StackTree));
+			DellStackTree(&StackTree, &Delete);
 			
 			CreateTree(tempOperator, Left, Right, &ExpressionTree);
 			
@@ -171,17 +174,17 @@ void InfixToPostfix(String infix, String postfix){
  */
 float CalculationOfTree(BinTree P){
 	int i;
-	float temp = 1.0;
 	  
     if(IsEmptyTree(P)) {
         return 0;  
 	}
+	//untuk leaf node
     else if(IsEmptyTree(Left(P)) && IsEmptyTree(Right(P))) {
     	//konversi dari char ke float
         return StringToFloat(Info(P));  
     }
   
- 	//rekursif inorder 
+	//rekursif 
     float left = CalculationOfTree(Left(P));  
     float right = CalculationOfTree(Right(P));  
     
@@ -213,10 +216,9 @@ float CalculationOfTree(BinTree P){
 			return 0;
 		}
 	}
-	for(i = 0; i < right; i++) {
-		temp *= left;
+	else if(strcmp(Info(P),"^")==0) {
+		return pow(left, right);
 	}
-	return temp;
 }
 
 /* Menampilkan menu untuk kalkulator.
@@ -333,12 +335,12 @@ int mainMenu(){
 	
 	while(i <= 100) {
 		puts("\n\t\t Aplikasi Kalkulator \t\t");
-		puts("\n Main Menu\n ");
-		puts(" 1. Kalkulator");
-		puts(" 2. Bangun Datar");
-		puts(" 3. About");
-		puts(" 4. Exit");
-		printf(" Masukkan pilihan sesuai nomor : ");
+		puts("\nMain Menu\n ");
+		puts("1. Kalkulator");
+		puts("2. Bangun Datar");
+		puts("3. About");
+		puts("4. Exit");
+		printf("Masukkan pilihan sesuai nomor : ");
 		scanf("%d", &nomor);
 		switch(nomor) {	
 		    case 1 :
