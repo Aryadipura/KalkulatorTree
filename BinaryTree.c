@@ -2,6 +2,7 @@
  *  Deskripsi : File Body Binary Tree
  *  Oleh      : Lamda Richo Vanjaya Sumaryadi
  *  Tanggal   : 21 Juli 2021
+ * 	Tanggal Modifikasi : 31 Juli 2021 
  */
 
 #include "BinaryTree.h"
@@ -93,7 +94,8 @@ int Priority(char x){
     case 'x': return 2;
     case '/': return 2;
     case ':': return 2;
-		case '^': return 3;    
+	case '^': return 3;   
+    case 'v': return 3;
   }
 }
 
@@ -105,6 +107,6 @@ boolean isPriority(char a, char b){
 
 /* Return true jika karakter yang dicek atau diperiksa merupakan sebuah operator */
 boolean isOperator(char c){
-  return(c=='+' || c=='-' || c=='*' || c=='x' || c=='/' || c ==':' || c =='^');
+  return(c=='+' || c=='-' || c=='*' || c=='x' || c=='/' || c ==':' || c =='^' || c=='v');
 }
 

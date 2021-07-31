@@ -4,11 +4,12 @@
  *  Tanggal   : 24 Juli 2021
  * 
  *  Modifikasi: Lamda Richo Vanjaya Sumaryadi
- *  Tanggal   : 25 Juli 2021
+ *  Tanggal   : 25 Juli 2021 dan 31 Juli 2021
  */
 
 #include "KalkulatorTree.h"
 #include "BinaryTree.h"
+#include "math.h"
 
 /* Membuat sebuah ekspresi tree dari ekspresi postfix yang sudah didapatkan. 
  * I.S. : Postfix terdefinisi.
@@ -130,6 +131,7 @@ void InfixToPostfix(String infix, String postfix){
             case '/':
             case ':':
             case '^':
+						case 'v':
                 postfix[index] = ' ';
                 index++;            
                 if(isEmptyStackChar(temp)){
@@ -219,6 +221,9 @@ float CalculationOfTree(BinTree P){
 	else if(strcmp(Info(P),"^")==0) {
 		return pow(left, right);
 	}
+	else if(strcmp(Info(P),"v")==0){
+		return sqrt(right);
+	}
 }
 
 /* Menampilkan menu untuk kalkulator.
@@ -237,8 +242,10 @@ void MenuKalkulator(){
 	printf("\n3. Gunakan ':' atau '/' untuk melakukan operasi pembagian.");
 	printf("\n4. Gunakan '+' untuk melakukan operasi penjumlahan.");
 	printf("\n5. Gunakan '-' untuk melakukan operasi pengurangan.");
-	printf("\n6. Dapat menambahkan '(' dan ')' ke dalam operasi perhitungan.");
-	printf("\n7. Bilangan yang berlaku adalah bilangan bulat \n");
+	printf("\n6. Gunakan '2v' untuk melakukan operasi akar pangkat 2");
+	printf("\n7. Dapat menambahkan '(' dan ')' ke dalam operasi perhitungan.");
+	printf("\n8. Bilangan yang berlaku adalah bilangan bulat");
+	printf("\n9. Dilarang untuk menggunakan spasi \n");
 	printf("\n\n");
 	system("PAUSE");
 	system("cls");
@@ -249,6 +256,7 @@ void MenuKalkulator(){
 	printf("\n");
 	expTree = BuildExpressionTree(postfix);
 	printf("= %.2f\n", CalculationOfTree(expTree)); 
+	
 }
 
 /* Menampilkan menu untuk bangun datar.
