@@ -1,6 +1,6 @@
 [Editors]
 <<<<<<< Updated upstream
-Order=0,1,2,11,5,6,3,7,9
+Order=0,1,2,11,5,6,7,9
 Focused=5
 =======
 Order=0,1,2,3,5,6,7,8,9,10,11,4
@@ -39,9 +39,9 @@ CursorRow=209
 TopLine=1
 LeftChar=1
 [Editor_5]
-CursorCol=19
-CursorRow=181
-TopLine=170
+CursorCol=35
+CursorRow=186
+TopLine=203
 =======
 TopLine=182
 LeftChar=1

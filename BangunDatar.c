@@ -4,8 +4,6 @@
  *  Tanggal   : 23 Juli 2021
  */
  
-#include<stdio.h>
-#include<math.h>
 #include"BangunDatar.h"
 
 /* Mengembalikan hasil perhitungan luas persegi.	*/

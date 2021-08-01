@@ -8,8 +8,6 @@
  */
 
 #include "KalkulatorTree.h"
-#include "BinaryTree.h"
-#include "math.h"
 
 /* Membuat sebuah ekspresi tree dari ekspresi postfix yang sudah didapatkan. 
  * I.S. : Postfix terdefinisi.
@@ -242,10 +240,10 @@ void MenuKalkulator(){
 	printf("\n3. Gunakan ':' atau '/' untuk melakukan operasi pembagian.");
 	printf("\n4. Gunakan '+' untuk melakukan operasi penjumlahan.");
 	printf("\n5. Gunakan '-' untuk melakukan operasi pengurangan.");
-	printf("\n6. Gunakan '2v' untuk melakukan operasi akar pangkat 2");
+	printf("\n6. Gunakan '2v' untuk melakukan operasi akar pangkat 2.");
 	printf("\n7. Dapat menambahkan '(' dan ')' ke dalam operasi perhitungan.");
-	printf("\n8. Bilangan yang berlaku adalah bilangan bulat");
-	printf("\n9. Dilarang untuk menggunakan spasi \n");
+	printf("\n8. Bilangan yang berlaku adalah bilangan bulat.");
+	printf("\n9. Dilarang untuk menggunakan spasi. \n");
 	printf("\n\n");
 	system("PAUSE");
 	system("cls");

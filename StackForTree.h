@@ -21,7 +21,6 @@
 #include"BinaryTree.h"
 #include"boolean.h"
 
-
 typedef BinTree infotypeStackTree;
 typedef struct tElmStackTree *addressStackTree;
 typedef struct tElmStackTree{

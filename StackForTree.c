@@ -7,7 +7,6 @@
  *  Tanggal   : 25 Juli 2021
  */
 
-
 #include "StackForTree.h"
 
 boolean isEmptyStackTree(StackTree S) {

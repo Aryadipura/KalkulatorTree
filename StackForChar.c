@@ -7,9 +7,7 @@
  *  Tanggal   : 25 Juli 2021
  */
  
-
 #include "StackForChar.h"
-
 
 boolean isEmptyStackChar(StackChar S) {
 /* Mengembalikan true jika Stack Char kosong */
