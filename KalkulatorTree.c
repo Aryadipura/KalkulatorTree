@@ -242,7 +242,7 @@ void MenuKalkulator(){
 	printf("\n5. Gunakan '-' untuk melakukan operasi pengurangan.");
 	printf("\n6. Gunakan '2v' untuk melakukan operasi akar pangkat 2.");
 	printf("\n7. Dapat menambahkan '(' dan ')' ke dalam operasi perhitungan.");
-	printf("\n8. Bilangan yang berlaku adalah bilangan bulat.");
+	printf("\n8. Bilangan yang berlaku adalah bilangan bulat dan bilangan desimal.");
 	printf("\n9. Dilarang untuk menggunakan spasi. \n");
 	printf("\n\n");
 	system("PAUSE");
