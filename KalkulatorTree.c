@@ -129,7 +129,7 @@ void InfixToPostfix(String infix, String postfix){
             case '/':
             case ':':
             case '^':
-						case 'v':
+			case 'v':
                 postfix[index] = ' ';
                 index++;            
                 if(isEmptyStackChar(temp)){
@@ -173,8 +173,6 @@ void InfixToPostfix(String infix, String postfix){
  * F.S. : Hasil kalkulasi dari P dikembalikan.
  */
 float CalculationOfTree(BinTree P){
-	int i;
-	  
     if(IsEmptyTree(P)) {
         return 0;  
 	}
@@ -313,7 +311,7 @@ void MenuBangunDatar(){
 			break;
 		default :
 			puts("\nNomor yang Anda masukkan tidak valid!");
-			puts("Silakan coba kembali :)");
+			puts("Silakan coba kembali");
 	}
 }
 
@@ -323,11 +321,12 @@ void MenuBangunDatar(){
  */
 void About(){
 	system("cls");
-	printf("\n\t\t About \n");
-	printf("\nAplikasi Kalkulator ini dibuat oleh : ");
-	printf("\nFiora Berliana Putri - 201524045");
-	printf("\nLamda Richo Vanjaya Sumaryadi - 201524049");
-	printf("\nMuhamad Aryadipura Sasmita Atmadja - 201524054");
+	printf("\n\t\t\t About \n");
+	printf("\nAplikasi Kalkulator ini dibuat oleh kelompok ARFILA");
+	printf("\nKelas 1B-D4 Teknik Informatika, yang beranggotakan : ");
+	printf("\n  1. Fiora Berliana Putri - 201524045");
+	printf("\n  2. Lamda Richo Vanjaya Sumaryadi - 201524049");
+	printf("\n  3. Muhamad Aryadipura Sasmita Atmadja - 201524054");
 	printf("\nUntuk memenuhi Tugas Besar mata kuliah Struktur Data dan Algoritma.\n");
 }
 

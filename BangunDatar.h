@@ -35,7 +35,6 @@ typedef struct {
 typedef struct {
 	int alas;
 	int tinggi;
-	int sisi;
 }Segitiga;
 
 typedef struct {
