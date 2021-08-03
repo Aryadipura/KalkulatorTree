@@ -56,7 +56,7 @@ BinTree RightChild(BinTree P){
 
 /* Memperlihatkan informasi dari setiap node dari sebuah ekspresi tree */
 void ShowInfoTree(BinTree P){
-  BinTree L, R, x;
+  BinTree L, R;
   
   if(P != Nil){
     ShowInfoTree(Left(P));
