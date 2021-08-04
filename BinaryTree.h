@@ -1,5 +1,5 @@
 /** Nama File : BinaryTree.h
- *  Deskripsi : File header ADT Binary Tree
+ *  Deskripsi : File header ADT Binary Tree sebagai perantara untuk membuat tree dalam modul BuildExpressionTree dalam KalkulatorTree.c
  *  Oleh      : Lamda Richo Vanjaya Sumaryadi
  *  Tanggal   : 21 Juli 2021
  * 

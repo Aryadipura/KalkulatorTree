@@ -1,5 +1,5 @@
 /** Nama File : BinaryTree.c
- *  Deskripsi : File Body Binary Tree
+ *  Deskripsi : File Body Binary Tree sebagai perantara untuk membuat tree dalam modul BuildExpressionTree dalam KalkulatorTree.c
  *  Oleh      : Lamda Richo Vanjaya Sumaryadi
  *  Tanggal   : 21 Juli 2021
  * 	Tanggal Modifikasi : 31 Juli 2021 
@@ -9,7 +9,7 @@
 
 /* Return true jika ekspresi tree kosong dan sebaliknya */
 boolean IsEmptyTree(BinTree P){
-  return (P == Nil);
+  return (P == Nil); 
 }
 
 /*Hasil Alokasi Ekspresi Tree menghasilkan address */
@@ -56,25 +56,25 @@ BinTree RightChild(BinTree P){
 
 /* Memperlihatkan informasi dari setiap node dari sebuah ekspresi tree */
 void ShowInfoTree(BinTree P){
-  BinTree L, R;
+  BinTree L, R; //L sebagai anak kiri dan R sebagai anak kanan
   
-  if(P != Nil){
-    ShowInfoTree(Left(P));
-    printf("Info Node\t: %s\n", Info(P));
-    if(LeftChild(P) != Nil){
-      L = LeftChild(P);
-      printf("Left Child\t: %s\n", Info(L));
-    } else{
-      printf("Left Child\t: NULL\n");
+  if(P != Nil){ //Cek apakah node P tidak kosong, jika iya lanjut ke proses selanjutnya
+    ShowInfoTree(Left(P)); //rekursif
+    printf("Info Node\t: %s\n", Info(P)); //Mencetak output dari info(P)
+    if(LeftChild(P) != Nil){ //Cek apakah anak kiri dari node P tidak kosong
+      L = LeftChild(P); //L diisi oleh info anak kiri dari P
+      printf("Left Child\t: %s\n", Info(L));//Mencetak output dari anak kiri dari P
+    } else{ //Jika anak kiri dari node P kosong
+      printf("Left Child\t: NULL\n"); //Cetak output null untuk anak kirinya
     }
-    if(RightChild(P) != Nil){
-      R = RightChild(P);
-      printf("Right Child\t: %s\n", Info(R));
-    } else{
-      printf("Right Child\t: NULL\n");
+    if(RightChild(P) != Nil){ //Jika anak kanan tidak kosong
+      R = RightChild(P); //R diisi info dari anak kanannya P
+      printf("Right Child\t: %s\n", Info(R)); //R dicetak ke layar
+    } else{ //Jikan anak kanan kosong
+      printf("Right Child\t: NULL\n");//R dicetak ke layar null
     }
     printf("\n");
-    ShowInfoTree(Right(P));
+    ShowInfoTree(Right(P));//Rekursif
   }
 }
 

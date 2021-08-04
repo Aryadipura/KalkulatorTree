@@ -213,7 +213,7 @@ float KelilingLingkaran(Lingkaran P){
 /* F.S   : Hasil perhitungan luas dan keliling lingkaran ditamplkan ke layar.	*/
 void HitungLingkaran(){
 	Lingkaran P;
-	printf("\n\t\t Hitung Lingkaran #\n");
+	printf("\n\t\t Hitung Lingkaran\n");
 	printf("\nMasukkan Jari-Jari\t: "); scanf("%d", &JariJari(P));
 	printf("\nLuas Lingkaran\t\t= %.2f", LuasLingkaran(P));
 	printf("\nKeliling Lingkaran\t= %.2f\n", KelilingLingkaran(P));

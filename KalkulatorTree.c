@@ -9,7 +9,7 @@
 
 #include "KalkulatorTree.h"
 
-/* Membuat sebuah ekspresi tree dari ekspresi postfix yang sudah didapatkan. 
+/* Membuat sebuah ekspresi tree dari ekspresi postfix yang sudah didapatkan dari modul InfixToPostfix. 
  * I.S. : Postfix terdefinisi.
  * F.S. : Mengembalikan ekspresi tree.
  */
@@ -22,7 +22,7 @@ BinTree BuildExpressionTree(infotypeTree postfix){
 	
 	NewStackTree(&StackTree);
 	while(i < strlen(postfix)){
-		//untuk operand
+		//untuk operand (., 0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
 		if (!isOperator(postfix[i]) && postfix[i] != ' '){
 			j = 0;
 			tempStr[j] = postfix[i];
@@ -32,6 +32,7 @@ BinTree BuildExpressionTree(infotypeTree postfix){
 				i++;	
 			}
 			CreateNodeTree(&ExpressionTree, tempStr);
+			//untuk kasus bilangan desimal agar dapat menjadi satu node
 			for(k = 0; k < strlen(tempStr); k++) {
 				tempStr[k] = ' ';
 			}
@@ -90,11 +91,11 @@ BinTree BuildExpressionTree(infotypeTree postfix){
 		i++;					
 	}
 	ExpressionTree = Info(Top(StackTree));
-	DellStackTree(&StackTree, &ExpressionTree);
+	DellStackTree(&StackTree, &ExpressionTree); //isi stack dihapus agar tidak buang buang memori
 	return ExpressionTree;
 }
 
-/* Mengkonversi ekspresi infix menjadi ekspresi postfix.
+/* Mengkonversi ekspresi infix yang diinputkan user menjadi ekspresi postfix.
  * I.S. : Infix terdefinisi.
  * F.S. : Infix berhasil dikonversi menjadi ekspresi postfix.
  */
@@ -130,7 +131,8 @@ void InfixToPostfix(String infix, String postfix){
             case ':':
             case '^':
 			case 'v':
-                postfix[index] = ' ';
+                //digunakan spasi untuk memisahkan antar angka agar dapat dengan mudah dibaca program saat pembuatan tree nya
+				postfix[index] = ' '; 
                 index++;            
                 if(isEmptyStackChar(temp)){
                     AddStackChar(&temp,infix[i]);
@@ -139,6 +141,7 @@ void InfixToPostfix(String infix, String postfix){
                     AddStackChar(&temp,infix[i]);
                 }
 				else{
+					//pemeriksaan tingkat prioritas dari operator
                     while(!isEmptyStackChar(temp)&&isPriority(Info(Top(temp)),infix[i])){
                         DellStackChar(&temp,&tempChar);
                         postfix[index] = tempChar;
@@ -160,15 +163,17 @@ void InfixToPostfix(String infix, String postfix){
                 break;
         }
     }
+    //jika isi stack belum kosong, maka akan dilakukan pop hingga stack kosong
+    //isi stack tersebut nantinya akan dimasukkan ke dalam variabel postfix
     while(!isEmptyStackChar(temp)) {
         DellStackChar(&temp,&tempChar);
         postfix[index] = tempChar;
         index++;                  
     }    
-    postfix[index] = '\0';
+    postfix[index] = '\0'; //sebagai tanda untuk modul BuildExpressionTree bahwa string akan berhenti dibaca jika menemui char \0
 }
 
-/* Mengembalikan hasil kalkuasi dari ekspresi tree.
+/* Mengembalikan hasil kalkuasi dari ekspresi tree yang dihasilkan modul BuildExpressionTree.
  * I.S. : P terdefinisi.
  * F.S. : Hasil kalkulasi dari P dikembalikan.
  */
@@ -176,7 +181,7 @@ float CalculationOfTree(BinTree P){
     if(IsEmptyTree(P)) {
         return 0;  
 	}
-	//untuk leaf node
+	//untuk leaf node atau operand
     else if(IsEmptyTree(Left(P)) && IsEmptyTree(Right(P))) {
     	//konversi dari char ke float
         return StringToFloat(Info(P));  
@@ -252,7 +257,6 @@ void MenuKalkulator(){
 	printf("\n");
 	expTree = BuildExpressionTree(postfix);
 	printf("= %.2f\n", CalculationOfTree(expTree)); 
-	
 }
 
 /* Menampilkan menu untuk bangun datar.
