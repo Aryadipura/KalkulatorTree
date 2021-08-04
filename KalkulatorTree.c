@@ -248,7 +248,7 @@ void MenuKalkulator(){
 	printf("\n8. Bilangan yang berlaku adalah bilangan bulat dan bilangan desimal.");
 	printf("\n9. Dilarang untuk menggunakan spasi.");
 	printf("\n10. Tidak dapat menghitung proses perkalian menggunakan '()'.");
-	printf("\n11. Tidak dapat menghitung proses perkalian bilangan negatif.");
+	printf("\n11. Tidak dapat menghitung proses perkalian dan pembagian bilangan negatif.");
 	printf("\n\n");
 	system("PAUSE");
 	system("cls");
