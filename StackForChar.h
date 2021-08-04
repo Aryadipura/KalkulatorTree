@@ -1,5 +1,5 @@
 /** Nama File : StackForChar.h
- *  Deskripsi : File header ADT StackChar
+ *  Deskripsi : File header ADT StackChar sebagai penampung untuk mengubah notasi infix ke postfix
  *  Oleh      : Muhamad Aryadipura
  *  Tanggal   : 24 Juli 2021
  * 

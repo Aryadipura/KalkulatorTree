@@ -1,5 +1,5 @@
 /** Nama File : StackForChar.c
- *  Deskripsi : File body ADT StackChar
+ *  Deskripsi : File body ADT StackChar sebagai penampung untuk mengubah notasi infix ke postfix
  *  Oleh      : Muhamad Aryadipura
  *  Tanggal   : 24 Juli 2021
  * 
@@ -17,7 +17,7 @@ boolean isEmptyStackChar(StackChar S) {
     return (Top(S)==Nil);
 }
 
-void NewStackChar(StackChar *S) {
+void NewStackChar(StackChar *S) { // dipanggil di InfixToPostfix
 /* Membuat sebuah Stack Char kosong */
 /* I.S   : S belum terdefinisi	*/
 /* F.S   : Menghasilkan Stack Char kosong */
@@ -48,7 +48,7 @@ void dealokasiStackChar(addressStackChar P) {
     free(P);
 }
 
-void AddStackChar(StackChar *S, infotypeStackChar X) {
+void AddStackChar(StackChar *S, infotypeStackChar X) { // dipanggil di InfixToPostfix
 /* Menambah X ke bagian Top	*/
 /* I.S   : S terdefinisi tapi kosong							*/
 /* F.S   : X ditambahkan ke Top	*/
@@ -59,7 +59,7 @@ void AddStackChar(StackChar *S, infotypeStackChar X) {
     Top(*S)=P;
 }
 
-void DellStackChar(StackChar *S, infotypeStackChar *X) {
+void DellStackChar(StackChar *S, infotypeStackChar *X) { // dipanggil di InfixToPostfix
 /* Menghapus X dari bagian Top*/
 /* I.S   : Top berisikan X	 */
 /* F.S   : X dihapuskan dari Top		 */ 

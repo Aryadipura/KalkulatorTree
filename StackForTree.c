@@ -1,5 +1,5 @@
 /** Nama File : StackForTree.c
- *  Deskripsi : File header ADT StackTree
+ *  Deskripsi : File body ADT StackTree sebagai penampung untuk mengubah notasi postfix ke pembuatan tree
  *  Oleh      : Muhamad Aryadipura
  *  Tanggal   : 24 Juli 2021
  * 
@@ -17,7 +17,7 @@ boolean isEmptyStackTree(StackTree S) {
     return (Top(S)==Nil);
 }
 
-void NewStackTree(StackTree *S) {
+void NewStackTree(StackTree *S) { //dipanggil BuildExpressionTree
 /* Membuat sebuah Stack Tree kosong		 */
 /* I.S   : S belum terdefinisi			 */
 /* F.S   : Menghasilkan Stack Char kosong */
@@ -48,7 +48,7 @@ void dealokasiStackTree(addressStackTree P) {
     free(P);
 }
 
-void AddStackTree(StackTree *S, infotypeStackTree X) {
+void AddStackTree(StackTree *S, infotypeStackTree X) { //dipanggil BuildExpressionTree
 /* Menambahkan X ke bagian Top	*/
 /* I.S   : S terdefinisi tapi kosong							*/
 /* F.S   : X ditambahkan ke Top	*/
@@ -60,7 +60,7 @@ void AddStackTree(StackTree *S, infotypeStackTree X) {
     Top(*S)=P;
 }
 
-void DellStackTree(StackTree *S, infotypeStackTree *X) {
+void DellStackTree(StackTree *S, infotypeStackTree *X) { //dipanggil BuildExpressionTree
 /* Menghapus X dari bagian Top*/
 /* I.S   : Top berisikan X	 */
 /* F.S   : X dihapuskan dari Top */ 

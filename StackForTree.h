@@ -1,5 +1,5 @@
 /** Nama File : StackForTree.h
- *  Deskripsi : File header ADT StackTree
+ *  Deskripsi : File header ADT StackTree sebagai penampung untuk mengubah notasi postfix ke pembuatan tree
  *  Oleh      : Muhamad Aryadipura
  *  Tanggal   : 24 Juli 2021
  * 
