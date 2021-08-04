@@ -246,7 +246,9 @@ void MenuKalkulator(){
 	printf("\n6. Gunakan '2v' untuk melakukan operasi akar pangkat 2.");
 	printf("\n7. Dapat menambahkan '(' dan ')' ke dalam operasi perhitungan.");
 	printf("\n8. Bilangan yang berlaku adalah bilangan bulat dan bilangan desimal.");
-	printf("\n9. Dilarang untuk menggunakan spasi. \n");
+	printf("\n9. Dilarang untuk menggunakan spasi.");
+	printf("\n10. Tidak dapat menghitung proses perkalian menggunakan '()'.");
+	printf("\n11. Tidak dapat menghitung proses perkalian bilangan negatif.");
 	printf("\n\n");
 	system("PAUSE");
 	system("cls");
